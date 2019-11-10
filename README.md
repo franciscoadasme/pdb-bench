@@ -125,14 +125,14 @@ Latest update: 2019-11-10
 
 ## Environment
 
-#### PC specs
+### PC specs
 
 * CPU: Intel(R) Core(TM) i7-5930K CPU @ 3.50GHz
 * RAM: 16 GB 2400 MHz DDR4
 * SSD: 480GB Western Digital Green SATA3
 * OS: Ubuntu 18.04.2
 
-#### Software
+### Software
 
 | Library     | Version | Language   | Language version |
 | ----------- | ------: | ---------- | ---------------: |
