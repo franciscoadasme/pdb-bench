@@ -1,0 +1,26 @@
+name: pdb-bench
+version: 0.1.0
+
+authors:
+  - Francisco Adasme <francisco.adasme@gmail.com>
+
+dependencies:
+  chem:
+    github: franciscoadasme/chem.cr
+    branch: master
+
+targets:
+  align:
+    main: bench/chem/align.cr
+  count:
+    main: bench/chem/count.cr
+  distance:
+    main: bench/chem/distance.cr
+  parse:
+    main: bench/chem/parse.cr
+  ramachandran:
+    main: bench/chem/ramachandran.cr
+
+crystal: ">= 1.14.0"
+
+license: MIT
