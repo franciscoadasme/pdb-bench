@@ -5,7 +5,8 @@ import MDAnalysis as mda
 
 
 def parse(filepath):
-    mda.Universe(filepath)
+    for _ in mda.coordinates.PDB.PDBReader(filepath):
+        pass
 
 
 pdbfile = sys.argv[1]
