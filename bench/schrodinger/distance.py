@@ -5,9 +5,9 @@ from schrodinger.structure import Structure
 from schrodinger.structutils.measure import measure_distance as measure_distance
 
 
-def distance(st):
-    r1 = st.findResidue("A:50")
-    r2 = st.findResidue("A:60")
+def distance(struc):
+    r1 = struc.findResidue("A:50")
+    r2 = struc.findResidue("A:60")
 
     min_dist = float("inf")
     for a in r1.atom:
@@ -20,6 +20,6 @@ def distance(st):
 pdbfile = sys.argv[1]
 repeats = int(sys.argv[2])
 
-st = Structure.read(pdbfile)
+struc = Structure.read(pdbfile)
 
-print(timeit(distance, st, repeats=repeats))
+print(timeit(distance, struc, repeats=repeats))

@@ -5,9 +5,9 @@ from schrodinger.structure import Structure
 from schrodinger.structutils.measure import measure_dihedral_angle as dihedral
 
 
-def ramachandran(st):
+def ramachandran(struc):
     torsions = []
-    for residue in st.residue:
+    for residue in struc.residue:
         try:
             atoms = residue.getDihedralAtoms("Phi")
             phi = dihedral(*atoms)
@@ -26,6 +26,6 @@ def ramachandran(st):
 pdbfile = sys.argv[1]
 repeats = int(sys.argv[2])
 
-st = Structure.read(pdbfile)
+struc = Structure.read(pdbfile)
 
-print(timeit(ramachandran, st, repeats=repeats))
+print(timeit(ramachandran, struc, repeats=repeats))

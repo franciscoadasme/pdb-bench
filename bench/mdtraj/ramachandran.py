@@ -1,9 +1,7 @@
 import sys
 from shared import timeit
 
-import numpy as np
 import mdtraj as md
-from mdtraj.geometry.dihedral import indices_phi, indices_psi
 
 
 def ramachandran(traj):

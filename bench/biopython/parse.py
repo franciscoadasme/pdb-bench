@@ -6,7 +6,7 @@ from Bio.PDB import PDBParser
 
 def parse(filepath):
     parser = PDBParser()
-    st = parser.get_structure("", filepath)
+    parser.get_structure("", filepath)
 
 
 pdbfile = sys.argv[1]

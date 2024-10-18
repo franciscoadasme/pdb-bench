@@ -2,7 +2,7 @@ import sys
 from shared import timeit
 
 import MDAnalysis as mda
-from MDAnalysis.lib.distances import distance_array
+from MDAnalysis.analysis.distances import distance_array
 
 
 def distance(u):

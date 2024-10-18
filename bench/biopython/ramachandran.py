@@ -5,10 +5,10 @@ from Bio.PDB import PDBParser
 from Bio.PDB.vectors import calc_dihedral
 
 
-def ramachandran(st):
+def ramachandran(struc):
     phi_angles = []
     psi_angles = []
-    residues = list(st.get_residues())
+    residues = list(struc.get_residues())
     for i in range(1, len(residues) - 1):
         res = residues[i]
         res_prev = residues[i - 1]
@@ -42,6 +42,6 @@ pdbfile = sys.argv[1]
 repeats = int(sys.argv[2])
 
 parser = PDBParser()
-st = parser.get_structure("", sys.argv[1])
+struc = parser.get_structure("", sys.argv[1])
 
-print(timeit(ramachandran, st, repeats=repeats))
+print(timeit(ramachandran, struc, repeats=repeats))
