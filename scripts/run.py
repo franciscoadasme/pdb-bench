@@ -62,7 +62,8 @@ def run_test(filepath, pdbfile, repeats=10):
     elif filepath.endswith(".py"):
         cmd = ["python3", filepath, pdbfile, str(repeats)]
     elif filepath.endswith(".cr"):
-        cmd = ["crystal", "run", "--release", filepath, "--", pdbfile, str(repeats)]
+        # cmd = ["crystal", "run", "--release", filepath, "--", pdbfile, str(repeats)]
+        cmd = [f"bin/{Path(filepath).stem}", pdbfile, str(repeats)]
     elif filepath.endswith(".tcl"):
         cmd = [
             "vmd",
