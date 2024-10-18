@@ -1,3 +1,6 @@
 __pycache__/
 .vscode/
 lib/
+bin/
+shard.lock
+*.out
